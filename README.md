@@ -31,11 +31,7 @@ python -m pip install -r requirements.txt
 
 ## Exécution
 
-Se placer à la racine du projet :
-
-```cmd
-cd A:\aaazresd\TerrainGenerator
-```
+Se placer à la racine du projet ( dossier contenant main.py )
 
 Affichage de l'aide :
 
@@ -58,10 +54,12 @@ python main.py --preset flat_test --resolution 256 --output output_quick
 
 Options CLI principales (valeurs par défaut reflétées dans `main.py`) :
 - `--seed` : seed déterministe (defaut: 42)
-- `--resolution` : largeur=hauteur (defaut: 512)
+- `--resolution` : largeur=hauteur (défaut: 512)
 - `--preset` : choisir un preset intégré
-- `--output` : dossier de sortie (defaut: `output`)
+- `--output` : dossier de sortie (défaut: `output`)
 - `--config` : chemin vers un JSON de configuration personnalisé
+- `--export-3d  ` : Exporter un fichier OBJ 3D pour chaque tuile
+- `--size-side` : permet de créé plusieurs tuile avec plusieurs génération différente, afin de crée un terrain plus complet, exemple : si on met 2, alors le programme créera 4 tuile, pour créé une grande tuile de coter 2 tuiles.
 
 ## Presets intégrés
 
@@ -69,18 +67,9 @@ Options CLI principales (valeurs par défaut reflétées dans `main.py`) :
 
 ## Fichier de configuration JSON
 
-Le JSON doit correspondre aux attributs de la dataclass `WorldConfig` (voir `config.py`). Exemple minimal :
+Le JSON doit correspondre aux attributs de la dataclass `WorldConfig` (voir `world_config_example.json`).
 
-```json
-{
-  "seed": 123,
-  "resolution": 512,
-  "sea_level": 0.35,
-  "stages": ["continent","base_noise","masks","export"],
-  "noise": {"octaves": 6, "frequency": 1.0},
-  "warp": {"enabled": true, "strength": 80.0}
-}
-```
+
 
 ## Sorties
 
