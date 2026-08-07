@@ -24,7 +24,7 @@ Installation rapide :
 ```cmd
 python -m venv venv
 venv\Scripts\activate
-python -m pip install numpy pillow matplotlib tifffile imageio opensimplex
+python -m pip install -r requirements.txt
 ```
 
 > Remarque : `opensimplex` est optionnel ; le module a une implémentation de secours si absent.
