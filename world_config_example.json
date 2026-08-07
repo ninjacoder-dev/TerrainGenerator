@@ -1,0 +1,23 @@
+{
+  "seed": 12345,
+  "resolution": 1024,
+  "world_size": 20000.0,
+  "sea_level": 0.35,
+  "stages": ["continent","tectonic","base_noise","domain_warp","mountains","volcano","valleys","canyons","plains","dunes","glaciers","thermal_erosion","hydraulic_erosion","wind_erosion","glacial_erosion","weathering","masks","biomes","rivers","lakes","ocean","rocks","forests","snow","grass","export"],
+  "noise": {"noise_type": "opensimplex", "octaves": 8, "frequency": 1.0, "amplitude": 1.0, "persistence": 0.5, "lacunarity": 2.0, "offset": 1.0},
+  "warp": {"enabled": true, "strength": 80.0, "octaves": 4, "frequency": 0.5, "iterations": 2},
+  "continent": {"enabled": true, "sea_level": 0.4, "continent_frequency": 0.8, "island_frequency": 3.0, "island_density": 0.3, "coast_smoothing": 5.0, "worley_weight": 0.3},
+  "tectonic": {"enabled": true, "num_plates": 12, "collision_mountain_height": 0.8, "subduction_trench_depth": -0.3, "rift_valley_depth": -0.15, "fault_roughness": 0.5},
+  "mountains": {"enabled": true, "types": ["alpine","himalayan","rocky","volcanic","plateau","hills"], "max_height": 1.0, "ridge_sharpness": 2.0, "slope_steepness": 1.5},
+  "volcano": {"enabled": true, "max_count": 5, "types": ["shield","stratovolcano","caldera","cinder_cone"], "max_height": 0.9, "crater_ratio": 0.15, "lava_flow_length": 0.3},
+  "dune": {"enabled": true, "wind_direction": 45.0, "wind_strength": 0.5, "dune_height": 0.1, "dune_spacing": 0.05},
+  "glacier": {"enabled": true, "altitude_threshold": 0.75, "flow_rate": 0.01, "moraine_height": 0.05},
+  "thermal_erosion": {"enabled": true, "iterations": 50, "talus_angle": 0.6, "erosion_rate": 0.5},
+  "hydraulic_erosion": {"enabled": true, "num_droplets": 500000, "erosion_rate": 0.3, "deposition_rate": 0.3, "evaporation_rate": 0.01, "gravity": 10.0, "min_slope": 0.01, "inertia": 0.3, "capacity_factor": 8.0, "max_lifetime": 64, "erosion_radius": 3},
+  "wind_erosion": {"enabled": true, "iterations": 100, "wind_direction": 45.0, "wind_strength": 0.3, "abrasion_rate": 0.1, "transport_rate": 0.3},
+  "humidity": {"evaporation_rate": 0.3, "wind_direction": 225.0, "rainfall_intensity": 0.5, "rain_shadow_strength": 0.7},
+  "temperature": {"base_temperature": 30.0, "altitude_lapse_rate": 6.5, "latitude_gradient": 0.7, "water_moderation": 0.3},
+  "river": {"enabled": true, "flow_threshold": 0.002, "max_rivers": 50, "meander_strength": 0.3, "delta_spread": 0.2},
+  "lake": {"enabled": true, "min_area": 100, "fill_depth": 0.02},
+  "export": {"output_dir": "output", "height_map": true, "normal_map": true, "slope_map": true, "curvature_map": true, "flow_map": true, "water_map": true, "biome_map": true, "moisture_map": true, "temperature_map": true, "ao_map": true, "sediment_map": true, "rock_mask": true, "snow_mask": true, "forest_mask": true, "grass_mask": true, "splat_map": true, "format": "png16", "export_3d": true}
+}
