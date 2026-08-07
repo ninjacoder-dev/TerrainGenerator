@@ -97,8 +97,8 @@ Dans le dossier `--output` (par défaut `output`) :
 
 ## Astuces et limitations
 
-- Résolution élevée (1024+) consomme beaucoup de RAM et CPU ; tester d'abord à 256/512.
-- Si `imageio`/`tifffile` manquent, certains formats (EXR/TIFF) peuvent échouer ; installer les paquets correspondants.
+- Résolution élevée consomme beaucoup de RAM et CPU ; tester d'abord à 256/512.
+- Si `imageio`/`tifffile` manquent, certains formats (TIFF) peuvent échouer ; installer les paquets correspondants.
 - Pour utilisation programmatique :
 
 ```py
@@ -110,12 +110,4 @@ world = World(cfg)
 world.generate()
 world.export()
 ```
-
-## Développement
-
-- Ajouter ou modifier des presets dans `config.py` via `_register_preset`.
-- Pour étendre le pipeline, implémenter une nouvelle étape et l'ajouter à `WorldConfig.stages` ou contrôler `stages` dans un fichier de config.
-
----
-
-Pour toute question supplémentaire ou pour un README en anglais, demander ici.
+## PS : l'export en 3d ne fonctionne pas très bien, si vous souhaitez apporter de l'aide, n'hesitez pas
